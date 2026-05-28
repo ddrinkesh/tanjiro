@@ -4,15 +4,15 @@ Do not use Shopify native slider. Always use Swiper.
 
 Follow this structure:
 
-1. Add section CSS file at top:
+## 1. Add section CSS file at top:
 {{ 'section-name.css' | asset_url | stylesheet_tag }}
 
-2. Use my spacing style structure:
+## 2. Use my spacing style structure:
 - Desktop padding/margin applied from 750px media query using `#shopify-section-{{ section.id }}` for margin and `.section-{{ section.id }}-padding` for padding.
 - Mobile padding uses `padding_top_mobi` and `padding_bottom_mobi` schema settings.
 - Do NOT calculate mobile margin from desktop values. Only desktop margin is used (inside the min-width: 750px block). Mobile has no margin override unless specifically requested.
 
-3. Always create slider options using capture:
+## 3. Always create slider options using capture:
 
 IMPORTANT: Do not add a trailing comma after the last object inside the capture block.
 Use Liquid `unless forloop.last` or carefully order conditions to avoid trailing commas,
@@ -58,7 +58,7 @@ because trailing commas in JSON will cause JavaScript parse errors.
   }
 {%- endcapture -%}
 
-4. Use this main section wrapper:
+## 4. Use this main section wrapper:
 
 <div class="section-{{ section.id }} section-{{ section.id }}-padding section-{{ section.id }}-margin color-{{ section.settings.color_scheme }} gradient section-main-box CUSTOM-SECTION-CLASS">
   <div class="page-width">
@@ -66,7 +66,7 @@ because trailing commas in JSON will cause JavaScript parse errors.
   </div>
 </div>
 
-5. If slider is enabled, use this structure:
+## 5. If slider is enabled, use this structure:
 
 {% if section.settings.enable_slider %}
   <div class="swiper-main-wrapper">
@@ -92,7 +92,7 @@ because trailing commas in JSON will cause JavaScript parse errors.
     {% endif %}
   </div>
 
-6. If slider is disabled, always create normal grid/list fallback:
+## 6. If slider is disabled, always create normal grid/list fallback:
 
 {% else %}
   <div class="section-name-items">
@@ -104,7 +104,7 @@ because trailing commas in JSON will cause JavaScript parse errors.
   </div>
 {% endif %}
 
-7. Always include these slider schema settings:
+## 7. Always include these slider schema settings:
 
 {
   "type": "header",
@@ -209,7 +209,7 @@ because trailing commas in JSON will cause JavaScript parse errors.
   "label": "Show navigation in"
 }
 
-8. Always rename everything based on the new section:
+## 8. Always rename everything based on the new section:
 - CSS file name
 - schema name
 - schema class
@@ -218,44 +218,25 @@ because trailing commas in JSON will cause JavaScript parse errors.
 - block type
 - preset name
 
-9. Do not copy `icon-with-text` names unless I ask for icon with text section.
+## 9. Do not copy `icon-with-text` names unless I ask for icon with text section.
 
-10. CSS must be separate and one-line per selector. If multiple responsive CSS rules use the same media breakpoint, group them inside one media query block and keep each selector one line inside that shared block.
+## 10. CSS must be separate and one-line per selector. If multiple responsive CSS rules use the same media breakpoint, group them inside one media query block and keep each selector one line inside that shared block.
 
-11. JavaScript must:
-- Read `data-slider-options` from the `.swiper` element using `JSON.parse`.
-- Support multiple Swiper instances on the same page (loop through all `.swiper` elements scoped inside the section).
-- Initialize Swiper only after DOM is ready.
-- Be scoped to the section using the section id or wrapper class.
-- Not conflict with other slider sections.
+## 11. Do NOT add JavaScript in the section file.
 
-Example JS structure:
+Swiper is already globally initialized in `theme-vendors.js`.
+It automatically finds every `.swiper[data-slider-options]` element on the page and initializes it.
 
-```javascript
-document.addEventListener('DOMContentLoaded', function () {
-  const sectionId = 'shopify-section-{{ section.id }}';
-  const sectionEl = document.getElementById(sectionId);
-  if (!sectionEl) return;
+- Do NOT write any `<script>` tag or JS block in the section.
+- Do NOT manually call `new Swiper(...)` in the section.
+- The section only needs the correct HTML structure with `data-slider-options` attribute on the `.swiper` element.
+- `theme-vendors.js` handles initialization, multiple instances, and all Swiper options automatically.
 
-  const swiperEl = sectionEl.querySelector('.swiper');
-  if (!swiperEl) return;
+## 12. Always create clean Shopify Dawn-compatible code.
 
-  let options = {};
-  try {
-    options = JSON.parse(swiperEl.dataset.sliderOptions || '{}');
-  } catch (e) {
-    console.warn('Swiper options parse error:', e);
-  }
+## 13. Shopify schema JSON must always be formatted as expanded multi-line JSON objects. Do not write schema settings, blocks, presets, or options as one-line objects.
 
-  new Swiper(swiperEl, options);
-});
-```
-
-12. Always create clean Shopify Dawn-compatible code.
-
-13. Shopify schema JSON must always be formatted as expanded multi-line JSON objects. Do not write schema settings, blocks, presets, or options as one-line objects.
-
-14. When creating section headings/titles for custom sections:
+## 14. When creating section headings/titles for custom sections:
 
 * Always follow my predefined section heading structure.
 * Use dynamic alignment settings.
