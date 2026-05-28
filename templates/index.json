@@ -1,75 +1,253 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "ekko_hero_banner": {
+      "type": "ekko-hero-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_3": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/hero-banner.jpg"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_3"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "",
+        "heading": "Elevate Everyday Living with Timeless Design",
+        "subtext": "Discover premium bathroom and kitchen solutions crafted for performance, style, and durability.",
+        "button_label": "Explore collection",
+        "button_link": "",
+        "show_navigation": false,
+        "show_pagination": true,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "ekko_category_grid_1": {
+      "type": "ekko-category-grid",
+      "blocks": {
+        "card_1": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/hero-banner.jpg",
+            "title": "Bathroom Faucets",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        },
+        "card_2": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/hero-banner.jpg",
+            "title": "Kitchen Faucets",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        },
+        "card_3": {
+          "type": "category_card",
+          "settings": {
+            "title": "Toilets",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        },
+        "card_4": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/hero-banner.jpg",
+            "title": "Showers",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 30,
+        "padding_bottom_mobi": 30
+      }
+    },
+    "ekko_mid_banner": {
+      "type": "ekko-mid-banner",
+      "settings": {
+        "color_scheme": "",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "heading": "Elevate Your Everyday Routine",
+        "subtext": "<p>Turn your bathroom into a personal retreat with high-end fixtures built for durability and refined aesthetics.</p>",
+        "button_label": "Discover More",
+        "button_link": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 60,
+        "padding_bottom_mobi": 60
+      }
+    },
+    "ekko_category_grid_2": {
+      "type": "ekko-category-grid",
+      "blocks": {
+        "card_5": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/hero-banner.jpg",
+            "title": "Bathroom Sinks",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        },
+        "card_6": {
+          "type": "category_card",
+          "settings": {
+            "title": "Kitchen Sinks",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        },
+        "card_7": {
+          "type": "category_card",
+          "settings": {
+            "image": "shopify://shop_images/hero-banner.jpg",
+            "title": "Bathtubs",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        },
+        "card_8": {
+          "type": "category_card",
+          "settings": {
+            "title": "Shower Bases",
+            "shop_now_label": "Shop Now",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_5",
+        "card_6",
+        "card_7",
+        "card_8"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 30,
+        "padding_bottom_mobi": 30
+      }
+    },
+    "ekko_image_text_split": {
+      "type": "ekko-image-text-split",
+      "settings": {
+        "color_scheme": "",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "heading": "Bring Design to Life",
+        "subtext": "<p>Transform your space with thoughtfully crafted designs that blend functionality with timeless elegance. Every detail is curated to elevate your everyday experience.</p>",
+        "button_label": "Find a Local Store",
+        "button_link": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 0,
+        "padding_bottom_mobi": 0
+      }
+    },
+    "ekko_cta_banner": {
+      "type": "ekko-cta-banner",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "heading": "Ready to Transform Your Space?",
+        "subtext": "Let our design experts guide you through our premium collections",
+        "button_primary_label": "Contact Us",
+        "button_primary_link": "",
+        "button_secondary_label": "Book Consultation",
+        "button_secondary_link": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 50,
+        "padding_bottom_mobi": 50
+      }
+    },
+    "ekko_footer": {
+      "type": "ekko-footer",
+      "blocks": {
+        "nav_col_1": {
+          "type": "nav_column",
+          "settings": {
+            "heading": "Company & Resources",
+            "menu": ""
+          }
+        },
+        "nav_col_2": {
+          "type": "nav_column",
+          "settings": {
+            "heading": "Customer Service",
+            "menu": ""
+          }
+        },
+        "nav_col_3": {
+          "type": "nav_column",
+          "settings": {
+            "heading": "Shop by Category",
+            "menu": ""
+          }
+        }
+      },
+      "block_order": [
+        "nav_col_1",
+        "nav_col_2",
+        "nav_col_3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "social_heading": "Follow Us",
+        "facebook_url": "",
+        "twitter_url": "",
+        "instagram_url": "",
+        "tiktok_url": "",
+        "newsletter_text": "Sign up to receive email news, promotions, and information about Ekko.",
+        "email_placeholder": "Email Address",
+        "submit_label": "Submit",
+        "accessibility_link": "",
+        "copyright_text": "©EkkoBath All Rights Reserved"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "ekko_hero_banner",
+    "ekko_category_grid_1",
+    "ekko_mid_banner",
+    "ekko_category_grid_2",
+    "ekko_image_text_split",
+    "ekko_cta_banner",
+    "ekko_footer"
   ]
 }

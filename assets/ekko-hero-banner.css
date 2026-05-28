@@ -1,0 +1,22 @@
+.ekko-hero-banner-wrapper { position: relative; width: 100%; overflow: hidden; }
+.ekko-hero-banner-wrapper .swiper { width: 100%; height: 750px; }
+.ekko-hero-banner-wrapper .swiper-slide { position: relative; width: 100%; height: 750px; overflow: hidden; }
+.ekko-hero-banner-wrapper .slide-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ekko-hero-banner-wrapper .placeholder-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ekko-hero-banner-wrapper .slide-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.3); }
+.ekko-hero-banner-wrapper .hero-content { position: absolute; top: 271px; left: 50%; transform: translateX(-50%) !important; max-width: 650px; width: 100%; text-align: center; color: #fff; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 30px; pointer-events: none; }
+.ekko-hero-banner-wrapper .hero-content a { pointer-events: all; }
+.ekko-hero-banner-wrapper .hero-heading { font-size: 52px; font-weight: 500; line-height: 66px; color: #fff; margin: 0; }
+.ekko-hero-banner-wrapper .hero-subtext { font-size: 18px; font-weight: 400; line-height: 30px; color: #fff; margin: 0; }
+.ekko-hero-banner-wrapper .hero-btn { display: inline-block; background: #fff; color: #212121; font-size: 16px; font-weight: 500; line-height: normal; padding: 14px 30px; text-decoration: none; white-space: nowrap; }
+.ekko-hero-banner-wrapper .hero-btn:hover { background: rgba(255, 255, 255, 0.9); color: #212121; }
+.ekko-hero-banner-wrapper .swiper-button-prev,.ekko-hero-banner-wrapper .swiper-button-next { color: #fff; }
+.ekko-hero-banner-wrapper .swiper-pagination-bullet { background: #fff; opacity: 0.6; }
+.ekko-hero-banner-wrapper .swiper-pagination-bullet-active { opacity: 1; }
+@media screen and (max-width: 749px) {
+.ekko-hero-banner-wrapper .swiper { height: 520px; }
+.ekko-hero-banner-wrapper .swiper-slide { height: 520px; }
+.ekko-hero-banner-wrapper .hero-content { top: 50%; transform: translate(-50%, -50%); width: 90%; padding: 0 20px; }
+.ekko-hero-banner-wrapper .hero-heading { font-size: 34px; line-height: 44px; }
+.ekko-hero-banner-wrapper .hero-subtext { font-size: 14px; line-height: 22px; }
+}

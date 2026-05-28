@@ -1,0 +1,16 @@
+.ekko-category-grid-wrapper { width: 100%; }
+.ekko-category-grid-wrapper .category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 50px; }
+.ekko-category-grid-wrapper .category-card { position: relative; aspect-ratio: 660 / 518; overflow: hidden; display: block; text-decoration: none; }
+.ekko-category-grid-wrapper .category-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.ekko-category-grid-wrapper .category-card .placeholder-svg { width: 100%; height: 100%; }
+.ekko-category-grid-wrapper .category-card:hover img { transform: scale(1.04); }
+.ekko-category-grid-wrapper .card-gradient { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 71.279%, rgba(18, 18, 18, 0.56) 81.602%, rgba(0, 0, 0, 0.8) 92.209%); }
+.ekko-category-grid-wrapper .card-footer { position: absolute; bottom: 24px; left: 24px; right: 24px; display: flex; align-items: flex-end; justify-content: space-between; }
+.ekko-category-grid-wrapper .card-title { font-size: 24px; font-weight: 500; line-height: normal; color: #fff; margin: 0; }
+.ekko-category-grid-wrapper .card-shop-now { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.ekko-category-grid-wrapper .card-shop-now span { font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase; line-height: normal; white-space: nowrap; }
+.ekko-category-grid-wrapper .card-shop-now .shop-underline { display: block; width: 100%; height: 1.5px; background: #fff; }
+@media screen and (max-width: 749px) {
+.ekko-category-grid-wrapper .category-grid { grid-template-columns: 1fr; padding: 0 20px; gap: 16px; }
+.ekko-category-grid-wrapper .category-card { aspect-ratio: 4 / 3; }
+}
