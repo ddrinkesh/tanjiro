@@ -1,0 +1,50 @@
+/* =============================================
+   SECTION-NAME
+   File: SECTION-NAME.css
+   ============================================= */
+
+/* ----- Wrapper ----- */
+.SECTION-NAME-main { position: relative; }
+
+/* ----- Section Head ----- */
+.SECTION-NAME-main .sec-head { display: flex; flex-direction: column; margin-bottom: 40px; }
+.SECTION-NAME-main .sec-head.text-align-left { align-items: flex-start; text-align: left; }
+.SECTION-NAME-main .sec-head.text-align-center { align-items: center; text-align: center; }
+.SECTION-NAME-main .sec-head.text-align-right { align-items: flex-end; text-align: right; }
+.SECTION-NAME-main .sec-head .sec-title { margin: 0 0 12px; }
+.SECTION-NAME-main .sec-head .sec-text { margin: 0; }
+
+/* ----- Body ----- */
+.SECTION-NAME-main .SECTION-NAME-body { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+/* ----- Item / Card ----- */
+.SECTION-NAME-main .SECTION-NAME-item { display: flex; flex-direction: column; }
+
+/* ----- Image ----- */
+.SECTION-NAME-main .SECTION-NAME-item .item-image { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 8px; }
+.SECTION-NAME-main .SECTION-NAME-item .item-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ----- Content ----- */
+.SECTION-NAME-main .SECTION-NAME-item .item-content { padding: 20px 0 0; }
+.SECTION-NAME-main .SECTION-NAME-item .item-title { font-size: 20px; font-weight: 600; line-height: 1.3; margin: 0 0 10px; }
+.SECTION-NAME-main .SECTION-NAME-item .item-text { font-size: 15px; line-height: 1.6; margin: 0; }
+
+/* ----- Button ----- */
+.SECTION-NAME-main .btns-wrapper { display: flex; justify-content: center; margin-top: 40px; }
+
+/* =============================================
+   RESPONSIVE — Tablet (750px – 989px)
+   ============================================= */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+.SECTION-NAME-main .SECTION-NAME-body { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* =============================================
+   RESPONSIVE — Mobile (max 749px)
+   ============================================= */
+@media screen and (max-width: 749px) {
+.SECTION-NAME-main .sec-head { margin-bottom: 24px; }
+.SECTION-NAME-main .SECTION-NAME-body { grid-template-columns: 1fr; gap: 20px; }
+.SECTION-NAME-main .SECTION-NAME-item .item-title { font-size: 18px; }
+.SECTION-NAME-main .btns-wrapper { margin-top: 28px; }
+}

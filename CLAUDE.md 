@@ -27,26 +27,26 @@ Always help me with:
 - Figma design to Shopify section conversion
 
 Important rules:
-## 1. Always follow Shopify Dawn theme structure and conventions.
-## 2. Use existing Dawn classes, structure, and patterns where appropriate.
-## 3. Do not break default Dawn functionality.
-## 4. Prefer extending Dawn instead of overriding unnecessarily.
-## 5. Give practical, ready-to-use solutions.
-## 6. Keep code clean, structured, and easy to maintain.
-## 7. Use dynamic schema settings instead of hard-coded values.
-## 8. Make everything responsive (desktop, tablet, mobile).
-## 9. Scope JavaScript to the section (avoid global conflicts).
-## 10. When creating custom sections:
+1. Always follow Shopify Dawn theme structure and conventions.
+2. Use existing Dawn classes, structure, and patterns where appropriate.
+3. Do not break default Dawn functionality.
+4. Prefer extending Dawn instead of overriding unnecessarily.
+5. Give practical, ready-to-use solutions.
+6. Keep code clean, structured, and easy to maintain.
+7. Use dynamic schema settings instead of hard-coded values.
+8. Make everything responsive (desktop, tablet, mobile).
+9. Scope JavaScript to the section (avoid global conflicts).
+10. When creating custom sections:
     - Provide full Liquid section code
     - Include proper schema
     - Follow my spacing structure (padding/margin with section.id)
-## 11. When I share code, follow my coding style and improve it.
-## 12. If something is wrong, fix it and explain briefly.
-## 13. Use one-line CSS format when I ask for it.
-## 14. Support multiple instances of sections (no conflicts).
-## 15. Always think like a professional Shopify developer before answering.
+11. When I share code, follow my coding style and improve it.
+12. If something is wrong, fix it and explain briefly.
+13. Use one-line CSS format when I ask for it.
+14. Support multiple instances of sections (no conflicts).
+15. Always think like a professional Shopify developer before answering.
 
-## 16. When adding buttons in custom sections:
+16. When adding buttons in custom sections:
 
     * Always use my predefined Dawn-compatible button structure.
     * Use dynamic schema settings for button label, link, and style.
@@ -96,7 +96,7 @@ Important rules:
 * Support both primary and secondary button styles.
 * Ensure button code works safely with multiple section instances.
 
-## 17. When creating schema settings for content:
+17. When creating schema settings for content:
 
 * Use `richtext` for long content, descriptions, paragraphs, or content that may require formatting.
 * Do not use `textarea` for long text content unless specifically required.
@@ -131,7 +131,7 @@ Examples:
 * Always think about better content editing experience inside Shopify customizer.
 
 
-## 18. When writing CSS for custom Shopify sections:
+18. When writing CSS for custom Shopify sections:
 
 * Always follow my CSS formatting structure and coding style.
 * Keep CSS clean, readable, grouped, and properly nested by section wrapper.
@@ -188,7 +188,7 @@ Additional instructions:
 * Maintain consistency across all sections.
 
 
-## 19. When converting Figma designs to Shopify sections:
+19. When converting Figma designs to Shopify sections:
 
 Full pixel-perfect Figma-to-Shopify rules are in `readme-ai-figma-to-shopify.md`.
 Always follow that file when I share a Figma design.
@@ -204,7 +204,7 @@ Summary of key rules:
 * Never guess unclear design details — always ask first.
 
 
-## 20. When handling images in custom sections:
+20. When handling images in custom sections:
 
 * Always use Shopify's `image_url` filter with `width` parameter for performance.
 * Always include `loading="lazy"` on non-hero images.
@@ -232,7 +232,7 @@ Example:
 ```
 
 
-## 21. Accessibility rules for custom sections:
+21. Accessibility rules for custom sections:
 
 * Always add `aria-label` or `aria-hidden` where relevant.
 * Navigation arrows must have `aria-label="Previous slide"` and `aria-label="Next slide"`.
@@ -242,7 +242,7 @@ Example:
 * Always use semantic HTML elements (`<section>`, `<article>`, `<nav>`, `<h2>`, etc.).
 
 
-## 22. SEO and PageSpeed performance rules (pagespeed.web.dev):
+22. SEO and PageSpeed performance rules (pagespeed.web.dev):
 
 Always write code that scores well on Core Web Vitals: LCP, CLS, FID/INP, and TBT.
 Think about performance impact before writing every section, image, JS, or CSS block.
@@ -422,5 +422,30 @@ When I ask to audit or improve performance, always check and advise on:
 - [ ] Structured data added where relevant (FAQ, reviews, products)
 
 
+
+23. When building any custom section — always start from my starter template:
+
+I have a starter section template file: `starter-section-template.liquid` and `starter-section-template.css`.
+These files have all my coding patterns pre-baked:
+- Spacing scoped style block
+- Heading structure (sec-head / sec-title / sec-text)
+- Button structure
+- Schema with all spacing settings
+- CSS one-line format with correct scoping and media query grouping
+
+RULES:
+* Always use this template as the base — never start from scratch.
+* Replace every instance of `SECTION-NAME` with the actual section name in kebab-case.
+* Replace `BLOCK-TYPE` and `BLOCK NAME` with the actual block type and name.
+* Add new settings, blocks, and CSS on top of the template — do not remove existing structure.
+* Keep all patterns exactly as they are in the template unless I ask to change them.
+* This is the single most important rule for keeping my coding style consistent.
+
+# Project Rules
+See detailed instructions in `.codex/ai-rules/`:
+
 My goal:
 I want to build high-quality, scalable Shopify themes using Dawn, create custom sections, fix issues quickly, and use AI as my development assistant.
+
+
+ 
