@@ -1,0 +1,23 @@
+.ekko-about-story-wrapper { width: 100%; background: #212121; overflow: hidden; }
+.ekko-about-story-wrapper .about-story-inner { max-width: 1150px; margin: 0 auto; }
+
+.ekko-about-story-wrapper .about-story-top { display: flex; align-items: flex-start; gap: 47px; margin-bottom: 40px; }
+.ekko-about-story-wrapper .about-story-heading { width: 40%; flex-shrink: 0; font-size: 52px; font-weight: 500; line-height: 66px; color: #fff; margin: 0; }
+.ekko-about-story-wrapper .about-story-intro { width: 60%; padding-left: 47px; border-left: 1px solid #4a4a4a; font-size: 16px; font-weight: 400; line-height: 25px; color: #cdcdcd; }
+.ekko-about-story-wrapper .about-story-intro p { margin: 0; }
+
+.ekko-about-story-wrapper .about-story-image { aspect-ratio: 1150 / 575; overflow: hidden; margin-bottom: 40px; }
+.ekko-about-story-wrapper .about-story-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ekko-about-story-wrapper .about-story-image .placeholder-svg { width: 100%; height: 100%; }
+
+.ekko-about-story-wrapper .about-story-body { font-size: 16px; font-weight: 400; line-height: 25px; color: #cdcdcd; }
+.ekko-about-story-wrapper .about-story-body p { margin: 0 0 20px; }
+.ekko-about-story-wrapper .about-story-body p:last-child { margin-bottom: 0; }
+
+@media screen and (max-width: 749px) {
+.ekko-about-story-wrapper .about-story-top { flex-direction: column; gap: 20px; margin-bottom: 30px; }
+.ekko-about-story-wrapper .about-story-heading { width: 100%; font-size: 34px; line-height: 44px; }
+.ekko-about-story-wrapper .about-story-intro { width: 100%; padding-left: 20px; font-size: 15px; line-height: 24px; }
+.ekko-about-story-wrapper .about-story-image { aspect-ratio: 4 / 3; margin-bottom: 30px; }
+.ekko-about-story-wrapper .about-story-body { font-size: 15px; line-height: 24px; }
+}

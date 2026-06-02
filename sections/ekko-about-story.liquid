@@ -1,0 +1,176 @@
+{{ 'ekko-about-story.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_mobi }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobi }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient section-main-box ekko-about-story-wrapper">
+  <div class="page-width">
+    <div class="about-story-inner{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+
+      {%- comment -%} ===== TOP ROW: HEADING + INTRO ===== {%- endcomment -%}
+      {% if section.settings.heading != blank or section.settings.intro_text != blank %}
+        <div class="about-story-top">
+          {% if section.settings.heading != blank %}
+            <h2 class="about-story-heading">{{ section.settings.heading }}</h2>
+          {% endif %}
+          {% if section.settings.intro_text != blank %}
+            <div class="about-story-intro">{{ section.settings.intro_text }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {%- comment -%} ===== FULL-WIDTH IMAGE ===== {%- endcomment -%}
+      <div class="about-story-image">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1500
+            | image_tag:
+              loading: 'lazy',
+              widths: '750, 1100, 1500',
+              sizes: '(min-width: 1200px) 1150px, 100vw',
+              width: section.settings.image.width,
+              height: section.settings.image.height,
+              alt: section.settings.heading | escape
+          }}
+        {%- else -%}
+          {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} ===== BOTTOM BODY TEXT ===== {%- endcomment -%}
+      {% if section.settings.body_text != blank %}
+        <div class="about-story-body">{{ section.settings.body_text }}</div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ekko About Story",
+  "class": "ekko-about-story-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Story"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_text",
+      "label": "Intro text",
+      "default": "<p>Ekko started with two brothers in Surrey, British Columbia, helping homeowners, builders, and developers create spaces they truly loved spending time in. What began as a small local journey rooted in quality, design, and simplicity slowly grew through years of hard work, relationships, and trust within the Lower Mainland community.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>For over 15 years, we've had the opportunity to help transform thousands of homes and projects across the region. Along the way, our goal has always stayed the same, making beautiful spaces feel more personal, more accessible, and more enjoyable to live in every single day.</p><p>What started locally has now grown into something much bigger. Ekko was built from the idea that thoughtfully designed products should be experienced by everyone, and we're excited to bring that vision to homes beyond the community where it all began.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section Settings For Mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobi",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobi",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ekko About Story"
+    }
+  ]
+}
+{% endschema %}

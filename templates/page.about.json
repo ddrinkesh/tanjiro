@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "about_hero": {
+      "type": "ekko-about-hero",
+      "settings": {
+        "color_scheme": "background-1",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "breadcrumb": "Home/ About Us",
+        "heading": "Ekko",
+        "subtext": "A world designed to elevate the way you live",
+        "overlay_opacity": 35,
+        "hero_height": 650,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "hero_height_mobi": 460
+      }
+    },
+    "about_story": {
+      "type": "ekko-about-story",
+      "settings": {
+        "color_scheme": "background-1",
+        "heading": "Our Story",
+        "intro_text": "<p>Ekko started with two brothers in Surrey, British Columbia, helping homeowners, builders, and developers create spaces they truly loved spending time in. What began as a small local journey rooted in quality, design, and simplicity slowly grew through years of hard work, relationships, and trust within the Lower Mainland community.</p>",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "body_text": "<p>For over 15 years, we've had the opportunity to help transform thousands of homes and projects across the region. Along the way, our goal has always stayed the same, making beautiful spaces feel more personal, more accessible, and more enjoyable to live in every single day.</p><p>What started locally has now grown into something much bigger. Ekko was built from the idea that thoughtfully designed products should be experienced by everyone, and we're excited to bring that vision to homes beyond the community where it all began.</p>",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 50,
+        "padding_bottom_mobi": 50
+      }
+    },
+    "about_community": {
+      "type": "ekko-image-text-split",
+      "settings": {
+        "color_scheme": "background-1",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "heading": "Building with our Community",
+        "subtext": "<p>Our commitment to quality goes far beyond the spaces we help create, it extends into the communities that have supported us from the very beginning. We believe the strongest brands are built through real relationships, local connections, and giving back to the people around us.</p><p>Being active boxers ourselves, supporting the boxing community across the Lower Mainland has always been something close to us. From local fight nights to community events, we take pride in staying involved and supporting the people, athletes, and organizations that continue bringing the community together.</p>",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 0,
+        "padding_bottom_mobi": 0
+      }
+    },
+    "about_cta": {
+      "type": "ekko-cta-banner",
+      "settings": {
+        "color_scheme": "background-1",
+        "image": "shopify://shop_images/hero-banner.jpg",
+        "heading": "Ready to Transform Your Space?",
+        "subtext": "Let our design experts guide you through our premium collections",
+        "button_primary_label": "Contact Us",
+        "button_primary_link": "",
+        "button_secondary_label": "Book Consultation",
+        "button_secondary_link": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top_mobi": 50,
+        "padding_bottom_mobi": 50
+      }
+    }
+  },
+  "order": [
+    "about_hero",
+    "about_story",
+    "about_community",
+    "about_cta"
+  ]
+}

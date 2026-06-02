@@ -1,0 +1,156 @@
+{{ 'ekko-about-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+    .section-{{ section.id }} .about-hero-media { height: {{ section.settings.hero_height }}px; }
+  }
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} .about-hero-media { height: {{ section.settings.hero_height_mobi }}px; }
+  }
+  .section-{{ section.id }} .about-hero-overlay { background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }}); }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-main-box ekko-about-hero-wrapper">
+  <div class="about-hero-media">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 1920
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          widths: '750, 1100, 1500, 1920',
+          sizes: '100vw',
+          width: section.settings.image.width,
+          height: section.settings.image.height,
+          class: 'about-hero-bg',
+          alt: section.settings.heading | escape
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'about-hero-bg placeholder-svg' }}
+    {%- endif -%}
+
+    <div class="about-hero-overlay"></div>
+
+    <div class="page-width about-hero-inner">
+      {%- if section.settings.breadcrumb != blank -%}
+        <div class="about-hero-breadcrumb">{{ section.settings.breadcrumb }}</div>
+      {%- endif -%}
+
+      <div class="about-hero-content{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {%- if section.settings.heading != blank -%}
+          <h1 class="about-hero-heading">{{ section.settings.heading }}</h1>
+        {%- endif -%}
+        {%- if section.settings.subtext != blank -%}
+          <p class="about-hero-subtext">{{ section.settings.subtext }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ekko About Hero",
+  "class": "ekko-about-hero-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "breadcrumb",
+      "label": "Breadcrumb",
+      "default": "Home/ About Us"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ekko"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "A world designed to elevate the way you live"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 35
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "range",
+      "id": "hero_height",
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "label": "Hero height",
+      "default": 650
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section Settings For Mobile"
+    },
+    {
+      "type": "range",
+      "id": "hero_height_mobi",
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "label": "Hero height",
+      "default": 460
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ekko About Hero"
+    }
+  ]
+}
+{% endschema %}
